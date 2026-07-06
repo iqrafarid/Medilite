@@ -16,7 +16,7 @@ function App() {
     const [loading, setLoading] = useState(true);
     
     useEffect(() => {
-        fetch('src/datasets/medicines.json')
+        fetch('/medicines.json')
         .then(res => res.json())
         .then(data => {
             setMedicines(data);
