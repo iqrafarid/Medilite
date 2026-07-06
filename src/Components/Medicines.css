@@ -1,0 +1,40 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    flex:1;
+  
+}
+
+header{
+      background-color:#1B4332;
+      color:white;
+      padding:20px 40px; 
+      display:flex;
+      justify-content:center;
+        align-items:center;
+}
+
+
+
+p{
+    color:#95D5B2;
+    font-size: 18px;
+}
+
+
+
+.medicine-list{
+display:grid;
+grid-template-columns: repeat(3,1fr);
+gap:20px;
+padding:20px;
+
+border:2px solid #2D6A4F;
+border-radius:12px;
+  background-color:#F0FAF4;
+}

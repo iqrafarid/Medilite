@@ -1,0 +1,63 @@
+ [
+        {
+          "id": 1,
+          "name": "Paracetamol",
+          "generic": "Yes",
+          "price": 5.99,
+          "category": "Pain Relief",
+          "stock": 50,
+          "prescriptionRequired": false,
+          "description": "Used for pain relief and fever reduction"
+        },
+        {
+          "id": 2,
+          "name": "Ibuprofen",
+          "generic": "No",
+          "price": 8.99,
+          "category": "Pain Relief",
+          "stock": 30,
+          "prescriptionRequired": false,
+          "description":  "Nonstero'id'al anti-inflammatory drug (NSA'id') used for pain relief, fever reduction, and inflammation reduction.."
+        },
+        {
+          "id": 3,
+          "name": "Amoxicillin",
+          "generic": "Yes",
+          "price": 12.99,
+          "category": "Antibiotic",
+          "stock": 0,
+          "prescriptionRequired": true,
+          "description": "Antibiotic used to treat bacterial infections"
+        },
+        {
+          "id": 4,
+          "name": "Loratadine",
+          "generic": "Yes",
+          "price": 6.99,
+          "category": "Allergy",
+          "stock": 25,
+          "prescriptionRequired": true,
+          "description": "Antihistamine used to relieve allergy symptoms"
+        },
+        {
+          "id": 5,
+          "name": "Metformin",
+          "generic": "No",
+          "price": 10.99,
+          "category": "Diabetes",
+          "stock": 15,
+          "prescriptionRequired": true,
+          "description":
+            "Used to treat type 2 diabetes by controlling blood sugar levels."
+        },
+        {
+          "id": 6,
+          "name": "Atorvastatin",
+          "generic": "No",
+          "price": 15.99,
+          "category": "Cholesterol",
+          "stock": 10,
+          "prescriptionRequired": true,
+          "description":
+            "Used to lower cholesterol and reduce the risk of heart disease."
+        }]
