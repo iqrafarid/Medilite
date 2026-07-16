@@ -10,19 +10,20 @@ import About from './Components/About';
 import Medicines from './Components/Medicines';
 import CartSideBar from "./Components/CartSidebar";
 import MedicineDetail from './Components/MedicineDetail';
+import Admin from './Components/Admin'
+import api from './api'
 
 function App() {
     const [medicines, setMedicines] = useState([]);
     const [loading, setLoading] = useState(true);
     
-    useEffect(() => {
-        fetch('/medicines.json')
-        .then(res => res.json())
-        .then(data => {
-            setMedicines(data);
-            setLoading(false);
-        })
-    }, []);
+useEffect(() => {
+    api.get('/api/medicines')
+    .then(res => {
+        setMedicines(res.data);
+        setLoading(false);
+    })
+}, []);
 
     const [cart, setCart] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +51,7 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/medicines/:id" element={<MedicineDetail medicines={medicines} />} />
+                <Route path='/admin' element={<Admin/>}/>
                 <Route path="*" element={<p>404 - Page Not Found</p>} />
             </Routes>
         </div>

@@ -19,6 +19,8 @@ function Navbar({cartCount}){
                 <li><NavLink to="/contact">Contact</NavLink></li>
                 <li><NavLink to="/login">Login</NavLink></li>
                 <li><NavLink to="/medicines">Medicines</NavLink></li>
+                <li><NavLink to="/admin">Admin</NavLink></li>
+
             </ul>
         </nav>
     )

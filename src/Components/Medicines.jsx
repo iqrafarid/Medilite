@@ -2,7 +2,7 @@ import MedicineCard from "./MedicineCard";
 import './Medicines.css'
 import SearchBar from "./SearchBar";
 import { useEffect, useState } from "react";
-
+import api from '../api'  // ← add this at top
 function Medicines({onAddToCart,medicines,loading}){
 
 
@@ -10,13 +10,10 @@ const [query, setQuery] = useState("")
 const [filtered, setFiltered] = useState([])
 
 
-useEffect(()=>{
-
-  const result=medicines.filter(med=>med.name.toLowerCase().includes(query.toLowerCase()))
-
-  setFiltered(result)
-
-},[query,medicines])
+useEffect(() => {
+  api.get(`/api/medicines?search=${query}`)
+  .then(res => setFiltered(res.data))
+}, [query, medicines])  // ← add medicines as dependency
 
 if (loading) return <p>Loading...</p>
 
